@@ -186,4 +186,4 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 ## 👤 Author
 
-Built by **Abhineet Sagar**
+Built by **Abhineet Sagar** 
