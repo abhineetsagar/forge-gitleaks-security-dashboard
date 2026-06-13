@@ -1,0 +1,27 @@
+modules:
+  webtrigger:
+    - key: gitleaks-ingest-webhook
+      function: ingest-function
+  bitbucket:repoMainMenuPage:
+    - key: security-dashboard-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: Gitleaks Security Dashboard
+  function:
+    - key: ingest-function
+      handler: resolvers/index.ingest
+    - key: resolver
+      handler: resolvers/index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+permissions:
+  scopes:
+    - storage:app
+    - read:user:bitbucket
+app:
+  id: ari:cloud:ecosystem::app/YOUR_APP_ID_HERE
+  runtime:
+    name: nodejs24.x

@@ -1,0 +1,27 @@
+{
+  "name": "gitleaks-security-dashboard",
+  "version": "1.0.0",
+  "description": "Organization-wide secret leak detection dashboard for Bitbucket Cloud, built on Atlassian Forge",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "lint": "eslint src/**/* || npm run --silent build",
+    "build": "forge build",
+    "deploy": "forge deploy",
+    "install-app": "forge install"
+  },
+  "dependencies": {
+    "@forge/api": "^7.2.1",
+    "@forge/bridge": "latest",
+    "@forge/kvs": "latest",
+    "@forge/react": "^11.16.1",
+    "@forge/resolver": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  }
+}
